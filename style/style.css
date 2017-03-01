@@ -1,7 +1,3 @@
-header {
-  margin-top: 25px;
-}
-
 body {
   background-color: #45558d;
 }
@@ -10,13 +6,14 @@ hr {
   background-color: #fff;
 }
 
-h1.display-4  {
-  text-align: center;
+h5, h3, h1 {
   color: #87ceeb;
 }
 
-h5, h3, h1 {
-  color: #87ceeb;
+header h1 {
+  font-weight: 300;
+  font-size: 7vw;
+  text-shadow: 3px 4px 0 rgba(0,0,0,0.2);
 }
 
 p, a, a:hover {
@@ -25,4 +22,14 @@ p, a, a:hover {
 
 section {
   margin-top: 30px;
+}
+
+header {
+  text-align: center;
+  height: 50vh;
+  background: url('../img/cover.jpg') bottom center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
