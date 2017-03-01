@@ -1,6 +1,7 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const config = {
   entry: './src/index.js',
@@ -28,6 +29,10 @@ const config = {
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     }),
+    new CopyWebpackPlugin([
+      // {output}/file.txt
+      { from: 'CNAME' },
+    ])
   ]
 };
 
