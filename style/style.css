@@ -13,11 +13,15 @@ h5, h3, h1 {
 header h1 {
   font-weight: 300;
   font-size: 7vw;
-  text-shadow: 3px 4px 0 rgba(0,0,0,0.2);
+  text-shadow: 3px 4px 0 rgba(0 ,0 ,0 , 0.2);
 }
 
-p, a, a:hover {
+p, a {
   color: #fff;
+}
+
+a:hover {
+  background:rgba(0, 0, 0, 0.3);
 }
 
 section {
@@ -32,4 +36,86 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.toggleNav {
+  display: none;
+}
+
+.flex-nav ul {
+  border: 1px solid black;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.flex-nav li {
+  flex: 2;
+}
+
+.flex-nav .social {
+  flex: 1;
+}
+
+nav a {
+  color: #fff !important;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-decoration: none !important;
+  background: rgba(0,0,0,0.2);
+  padding: 20px 5px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  transition: 0.5s;
+}
+
+@media all and (max-width: 1000px) {
+  header {
+    height: 33vh;
+  }
+
+  .flex-nav ul {
+    flex-wrap: wrap;
+  }
+
+  .flex-nav li {
+    flex: 1 1 50%;
+  }
+
+  .flex-nav .social {
+    flex: 1 1 25%;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .flex-nav li {
+    flex-basis: 100%;
+  }
+
+  .toggleNav {
+    display: block
+  }
+
+  .main-container > * {
+    order: 10;
+  }
+
+  .flex-nav {
+    order: 1;
+  }
+
+  .flex-nav ul {
+    display: none;
+  }
+
+  .flex-nav ul.open {
+    display: flex;
+  }
 }

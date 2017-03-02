@@ -10,13 +10,32 @@
     <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   </head>
-  <header>
-    <h1>Caique Caleiro</h1>
-  </header>
+
   <body>
-    <div class="container">
-      <div>
-        <section>
+    <div class="main-container">
+      <header>
+        <h1>Caique Caleiro</h1>
+      </header>
+
+      <nav class="flex-nav">
+        <a href="#" class="toggleNav">☰ Menu</a>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#volunteer">Volunteer</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="social">
+            <a target="_blank" href="http://linkedin.com/in/caiquecaleiro"><i class="fa fa-linkedin"></i></a>
+          </li>
+          <li class="social">
+            <a target="_blank" href="http://github.com/caiquecaleiro"><i class="fa fa-github"></i></a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="container">
+        <section id="about">
           <h3>About</h3>
           <p class="lead text-justify">
             I'm a self-taught developer with more than 3 years of experience, working as a <i><b>Software Engineer, Development Lead and Front End Developer</b></i>.
@@ -24,7 +43,8 @@
             Currently I'm moving to New Zealand with the Working Holiday Visa and I'm looking forward for new challenges and adventures there.
           </p>
         </section>
-        <section>
+
+        <section id="skills">
           <h3>Technical skills</h3>
           <p class="lead text-justify">
             I've worked with many technologies but my main skills are in <i><b>JavaScript, React, Angular, NodeJS and SQL</b></i>.
@@ -32,7 +52,8 @@
             Other technologies that I've worked are <i><b>Java, PHP and PL/SQL</b></i>.
           </p>
         </section>
-         <section>
+
+        <section>
           <h3>Non-technical skills</h3>
           <p class="lead text-justify">
             I've grown up a lot because of mine interpersonal skills. I also love to do teamwork and to teach people (volunteer work).
@@ -40,7 +61,8 @@
             Besides learning programming languages on my own, I've learned English (Advanced level) and I've a basic knowledge about German.
           </p>
         </section>
-        <section>
+
+        <section id="experience">
           <h3>Experience</h3>
           <div>
             <p class="lead"><i><b>Senior Sistemas - Front End Developer (2016-2017)</b></i></p>
@@ -61,22 +83,25 @@
             </p>
           </div>
         </section>
-        <section>
+
+        <section id="volunteer">
           <h3>Volunteer work</h3>
           <p class="lead text-justify">
             I like to help the community. Actually, I've organized a group of people that were willing to learn Web Development through the <a href="https://www.freecodecamp.com/" target="_blank"><i><b>Free Code Camp</b></i></a>.
           </p>
         </section>
-        <section>
+
+        <section id="contact">
           <h3>Contact</h3>
-          <a href="https://github.com/caiquecaleiro" target="_blank"><i class="fa fa-github fa-fw"></i> GitHub</a>
+<a href="https://github.com/caiquecaleiro" target="_blank"><i class="fa fa-github fa-fw"></i> GitHub</a>
           <a href="https://www.linkedin.com/in/caiquecaleiro" target="_blank"><i class="fa fa-linkedin fa-fw"></i> LinkedIn</a>
         </section>
       </div>
+
+      <footer class="text-center">
+        <hr>
+        <p>Written and coded by <a href="https://github.com/caiquecaleiro" target="_blank">Caique Caleiro</a>.</p>
+      </footer>
     </div>
   </body>
-  <footer class="text-center">
-    <hr>
-    <p>Written and coded by <a href="https://github.com/caiquecaleiro" target="_blank">Caique Caleiro</a>.</p>
-  </footer>
 </html>
