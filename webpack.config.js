@@ -7,7 +7,7 @@ const config = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.[chunkhash].js'
   },
   module: {
     rules: [
@@ -34,12 +34,11 @@ const config = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin('styles.css'),
+    new ExtractTextPlugin('styles.[contenthash].css'),
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     }),
     new CopyWebpackPlugin([
-      // {output}/file.txt
       { from: 'CNAME' },
     ])
   ]
