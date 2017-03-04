@@ -1,6 +1,6 @@
 body {
-  background-color: #45558d;
-  font-family: "adobe-garamond-pro";
+  background-color: black;
+  font-family: 'adobe-garamond-pro';
 }
 
 hr {
@@ -8,18 +8,18 @@ hr {
 }
 
 h5, h3, h1 {
-  color: #87ceeb;
+  color: #fff;
 }
 
 header h1 {
   font-weight: 300;
-  font-size: 7vw;
+  font-size: 10vw;
   text-shadow: 3px 4px 0 rgba(0 ,0 ,0 , 0.2);
   color: #fff;
 }
 
 header p {
-  font-size: 4vw;
+  font-size: 6vw;
   font-style: italic;
 }
 
@@ -29,12 +29,14 @@ p, a {
 
 a:hover {
   background:rgba(0, 0, 0, 0.3);
+  color: #fff;
+  text-decoration: none;
 }
 
 header {
   text-align: center;
-  height: 50vh;
-  background: url('../img/cover.jpg') bottom center no-repeat;
+  height: 100vh;
+  background: url('../img/Love-Coding.jpg') bottom center no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -47,7 +49,6 @@ header {
 }
 
 .flex-nav ul {
-  border: 1px solid black;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -60,6 +61,12 @@ header {
 
 .flex-nav .social {
   flex: 1;
+}
+
+.flex-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 nav a {
@@ -75,25 +82,11 @@ nav a {
   transition: 0.5s;
 }
 
-@media all and (max-width: 1000px) {
-  header {
-    height: 33vh;
-  }
-
+@media all and (max-width: 880px) {
   .flex-nav ul {
     flex-wrap: wrap;
   }
 
-  .flex-nav li {
-    flex: 1 1 50%;
-  }
-
-  .flex-nav .social {
-    flex: 1 1 25%;
-  }
-}
-
-@media all and (max-width: 500px) {
   .main-container {
     display: flex;
     flex-direction: column;
@@ -106,15 +99,7 @@ nav a {
   .toggleNav {
     display: block
   }
-
-  .main-container > * {
-    order: 10;
-  }
-
-  .flex-nav {
-    order: 1;
-  }
-
+  
   .flex-nav ul {
     display: none;
   }
@@ -124,16 +109,67 @@ nav a {
   }
 }
 
+.black-background {
+  height: 100vh;
+  background: black;
+}
+
+.active-section {
+  background: rgba(37, 37, 37, 0.5);
+  font-style: italic;
+}
+
 .section-wrapper {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
 }
 
 .section-wrapper section {
   padding: 8vh 15vw 8vh 15vw;
+  height: 100vh;
 }
 
-#about, #non-tech, #volunteer {
-  background-color: #2c365a;
+#skills {
+  background: url('../img/cover.jpg') bottom center no-repeat;
+  background-size: cover;
+}
+
+#volunteer {
+  background: url('../img/coding.jpg') bottom center no-repeat;
+  background-size: cover;
+}
+
+p {
+  font-size: 160%;
+  font-weight: 400;
+}
+
+.contact-link {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#contact a {
+  text-align: center;
+  flex: 1 1 33.3%;
+}
+
+@media all and (max-width: 800px) {
+  p {
+    font-size: 120%;
+    font-weight: 400;
+  }
+
+  #contact a {
+    flex: 1 1 100%;
+    padding: 5vh 2vw 5vh 2vw;
+  }
+}
+
+@media all and (max-height: 600px) {
+  p {
+    font-size: 100%;
+    font-weight: 400;
+  }
 }
