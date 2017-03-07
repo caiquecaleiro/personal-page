@@ -50,6 +50,76 @@ section {
   font-weight: 700;
 }
 
+.flex-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.flex-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.flex-nav li {
+  flex: 2;
+}
+
+.flex-nav .social {
+  flex: 1;
+}
+
+.toggleNav {
+  display: none;
+}
+
+nav a {
+  color: #fff !important;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-decoration: none !important;
+  background: rgba(0,0,0,0.2);
+  padding: 20px 5px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.black-background {
+  height: 100vh;
+  background: #000000;
+}
+
+.active-section {
+  background: rgba(37, 37, 37, 0.5);
+  font-style: italic;
+}
+
+@media all and (max-width: 880px) {
+  .flex-nav ul {
+    flex-wrap: wrap;
+  }
+  
+  .flex-nav li {
+    flex-basis: 100%;
+  }
+
+  .toggleNav {
+    display: block
+  }
+  
+  .flex-nav ul {
+    display: none;
+  }
+
+  .flex-nav ul.open {
+    display: flex;
+  }
+}
+
 @media all and (min-width: 701px) {
   .experience {
     display: flex;
