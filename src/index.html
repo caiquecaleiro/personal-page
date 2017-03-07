@@ -5,103 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Caique Caleiro</title>
-     
-    <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   </head>
 
   <body>
-    <div class="main-container">
-      <header>
-        <p>Hello, I'm</p>
-        <h1>Caique Caleiro.</h1>
-      </header>
+    <header>
+      <p>Hello, I'm</p>
+      <h1>Caique Caleiro.</h1>
+    </header>
 
-      <nav class="flex-nav">
-        <a class="toggleNav">☰</a>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#volunteer">Volunteer</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li class="social">
-            <a target="_blank" href="http://linkedin.com/in/caiquecaleiro"><i class="fa fa-linkedin"></i></a>
-          </li>
-          <li class="social">
-            <a target="_blank" href="http://github.com/caiquecaleiro"><i class="fa fa-github"></i></a>
-          </li>
-        </ul>
-      </nav>
+    <!-- About -->
+    <section>
+      <h3>About</h3>
+      <p>
+        I'm a Front End Developer with over three years of experience, living in Wellington, New Zealand. 
+        I've already worked with large projects in Brazil and India, 
+        and currently I'm looking for new opportunities in New Zealand.
+      </p>
+    </section>
 
-      <div class="section-wrapper">
-        <section id="about">
-          <p>- I'm a Front End Developer</p>
-          <p>- Over three years of experience</p>
-          <p>- Brazilian</p>
-          <p>- I've lived and worked in India</p>
-          <p>- Now I live in New Zealand</p>
-          <p>- English language is fine</p>
-          <p>- But I'd love to learn German or Japanese</p>
-          <p>- I was a volunteer teacher</p>
-          <p>- And I love to do volunteer work</p>
-          <p>- My favorite sport is mountain biking</p>
-          <p>- And I love nature</p>
-        </section>
-
-        <section id="skills">
-          <h3>I've experience with...</h3>
-          <br>
-          <p>- JavaScript</p>
-          <p>- Angular</p>
-          <p>- React</p>
-          <p>- HTML5</p>
-          <p>- CSS3</p>
-          <p>- NodeJS</p>
-          <p>- Java</p>
-          <p>- PHP</p>
-          <p>- SQL</p>
-          <p>- MongoDB</p>
-        </section>
-
-        <section id="experience">
-          <h3>I've worked as...</h3>
-          <br>
-          <div>
-            <p><i>Front End Developer at Senior Sistemas - (2016-2017) - Brazil</i></p>
-          </div>
-          <br>
-          <div>
-            <p><i>Development Lead at Philips - (2015-2016) - Brazil/India</i></p>
-          </div>
-          <br>
-          <div>
-            <p><i>Software Engineer at Philips - (2013-2016) - Brazil</i></p>
-          </div>
-        </section>
-
-        <section id="volunteer">
-          <h3>Volunteer work...</h3>
-          <br>
-          <p>- I like to help the community.</p>
-          <p>- I was the leader and volunteer teacher at the <a href="https://www.freecodecamp.com/" target="_blank"><i><b>Free Code Camp</b></i></a> Timbó/Brazil.</p>
-        </section>
-
-        <section id="contact">
-          <h3>Feel free to contact me...</h3>
-          <br>
-          <div class="contact-link">
-            <a href="https://github.com/caiquecaleiro" target="_blank"><i class="fa fa-github fa-5x"></i></a>
-            <a href="https://www.linkedin.com/in/caiquecaleiro" target="_blank"><i class="fa fa-linkedin fa-5x"></i></a>
-            <a href="mailto:caiquecaleiro@gmail.com?Subject=Website%20contact" target="_top"><i class="fa fa-envelope fa-5x"></i></a>
-          </div>
-        </section>
+    <!-- Experience -->
+    <section>
+      <h3>Experience</h3>
+      <div class="experience">
+        <div class="company-info">
+          <h5>Senior Sistemas</h5>
+          <p>Jun 2016 - Feb 2017</p>
+        </div>
+        <div class="additional-info">
+          <strong>Front End Developer</strong>
+          <span class="role-detail">
+            Senior Sistemas is one of the largest software companies in Brazil. 
+            There I was helping on the development of new features for the ERP, using AngularJS and Metronic design. 
+            I also have motivated my teammates to study and to build prototypes using new technologies,
+            such as ES6, React, NodeJS and MongoDB.
+          </span>
+          <span class="location">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            Blumenau, Brazil
+          </span>
+        </div>
       </div>
 
-      <footer class="text-center">
-        <hr>
-        <p>© Caique Caleiro 2017</p>
-      </footer>
-    </div>
+      <div class="experience">
+        <div class="company-info">
+          <h5>Philips</h5>
+          <p>Jun 2015 - Jun 2016</p>
+        </div>
+        <div class="additional-info">
+          <strong>Development Lead</strong>
+          <span class="role-detail">
+            I was responsible to lead and help the teams on the most important project at Philips Brazil, the Tasy HTML5 Health System.
+            I have led and helped over 80 developers in Brazil and worked in India for two months, leading a team with 20 developers.
+          </span>
+          <span class="location">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            Blumenau, Brazil - Bengaluru, India
+          </span>
+        </div>
+      </div>
+
+      <div class="experience">
+        <div class="company-info">
+          <h5>Philips</h5>
+          <p>Oct 2013 - Jun 2016</p>
+        </div>
+        <div class="additional-info">
+          <strong>Software Engineer</strong>
+          <span class="role-detail">
+            Philips has developed the Tasy Health System, which is being used by over 1000 hospitals and health clinics in Latin America.
+            As a Software Engineer, I've developed new features to help on the software internationalization for the Latin America and I've worked on many projects for
+            Desktop, Web and Mobile platforms.
+          </span>
+          <span class="location">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            Blumenau, Brazil
+          </span>
+        </div>
+      </div>
+    </section>
+    
+    <footer>
+      <hr>
+      <p>© Caique Caleiro 2017</p>
+    </footer>
   </body>
 </html>

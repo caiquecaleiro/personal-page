@@ -1,175 +1,76 @@
 body {
-  background-color: black;
-  font-family: 'adobe-garamond-pro';
-}
-
-hr {
-  background-color: #fff;
-}
-
-h5, h3, h1 {
+  background-color: #000000;
   color: #fff;
-}
-
-header h1 {
-  font-weight: 300;
-  font-size: 10vw;
-  text-shadow: 3px 4px 0 rgba(0 ,0 ,0 , 0.2);
-  color: #fff;
-}
-
-header p {
-  font-size: 6vw;
-  font-style: italic;
-}
-
-p, a {
-  color: #fff;
-}
-
-a:hover {
-  background:rgba(0, 0, 0, 0.3);
-  color: #fff;
-  text-decoration: none;
+  font-family: 'EB Garamond', serif;
 }
 
 header {
-  text-align: center;
-  height: 100vh;
-  background: url('../img/Love-Coding.jpg') bottom center no-repeat;
-  background-size: cover;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.toggleNav {
-  display: none;
-}
-
-.flex-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-.flex-nav li {
-  flex: 2;
-}
-
-.flex-nav .social {
-  flex: 1;
-}
-
-.flex-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-nav a {
-  color: #fff !important;
-  font-weight: 400;
-  letter-spacing: 2px;
-  text-decoration: none !important;
-  background: rgba(0,0,0,0.2);
-  padding: 20px 5px;
-  display: inline-block;
-  width: 100%;
   text-align: center;
-  transition: 0.5s;
-}
-
-@media all and (max-width: 880px) {
-  .flex-nav ul {
-    flex-wrap: wrap;
-  }
-
-  .main-container {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .flex-nav li {
-    flex-basis: 100%;
-  }
-
-  .toggleNav {
-    display: block
-  }
-  
-  .flex-nav ul {
-    display: none;
-  }
-
-  .flex-nav ul.open {
-    display: flex;
-  }
-}
-
-.black-background {
+  justify-content: center;
   height: 100vh;
-  background: black;
+  background: url('../img/cover.jpg') no-repeat center fixed;
 }
 
-.active-section {
-  background: rgba(37, 37, 37, 0.5);
+header h1 {
+  font-weight: 500;
+  font-size: 10vw;
+  text-shadow: 3px 4px 0 rgba(0 ,0 ,0 , 0.2);
+}
+
+header p {
+  font-weight: 400;
+  font-size: 7vw;
   font-style: italic;
 }
 
-.section-wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-.section-wrapper section {
-  padding: 8vh 15vw 8vh 15vw;
-  height: 100vh;
-}
-
-#skills {
-  background: url('../img/cover.jpg') bottom center no-repeat;
-  background-size: cover;
-}
-
-#volunteer {
-  background: url('../img/coding.jpg') bottom center no-repeat;
-  background-size: cover;
-}
-
-p {
-  font-size: 160%;
-  font-weight: 400;
-}
-
-.contact-link {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-#contact a {
+footer {
   text-align: center;
-  flex: 1 1 33.3%;
 }
 
-@media all and (max-width: 800px) {
-  p {
-    font-size: 120%;
-    font-weight: 400;
+hr {
+  border-color: #fff;
+}
+
+section {
+  padding: 5vh 8vw 5vh 8vw;
+}
+
+.experience {
+  text-align: left;
+  padding: 20px 0 20px 0;
+}
+
+.location, .additional-info > strong {
+  display: block;
+}
+
+.experience h5 {
+  font-weight: 700;
+}
+
+@media all and (min-width: 701px) {
+  .experience {
+    display: flex;
+    flex-wrap: wrap
   }
 
-  #contact a {
-    flex: 1 1 100%;
-    padding: 5vh 2vw 5vh 2vw;
+  .company-info {
+    flex: 1;
+  }
+
+  .additional-info {
+    flex: 3;
   }
 }
 
-@media all and (max-height: 600px) {
-  p {
-    font-size: 100%;
-    font-weight: 400;
+@media all and (max-width: 700px) {
+  section {
+    text-align: center;
+  }
+
+  .role-detail {
+    display: none;
   }
 }
