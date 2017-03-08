@@ -98,6 +98,21 @@ nav a {
   font-style: italic;
 }
 
+.skill-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill-list li {
+  flex: 1 50%;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
+}
+
 @media all and (max-width: 880px) {
   .flex-nav ul {
     flex-wrap: wrap;
@@ -142,5 +157,9 @@ nav a {
 
   .role-detail {
     display: none;
+  }
+
+  .skill-list li {
+    flex: 1 100%;
   }
 }

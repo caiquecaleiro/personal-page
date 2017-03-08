@@ -2,7 +2,7 @@ import '../style/style.css';
 
 const toggleNav = document.querySelector('.toggleNav');
 const ul = document.querySelector('.flex-nav ul');
-const li = document.querySelectorAll('li');
+const navItems = ul.querySelectorAll('li');
 const nav = document.querySelector('nav');
 const links = document.querySelectorAll('a[href^="#"]');
 
@@ -18,7 +18,21 @@ const experiences = [
   { company: 'Philips', period: 'Oct 2013 - Jun 2016', position: 'Front End Developer', location: 'Blumenau, Brazil - Bengaluru, India', description: 'Philips has developed the Tasy Health System, which is being used by over 1000 hospitals and health clinics in Latin America. As a Software Engineer, I have developed new features to help on the software internationalization for the Latin America and I have worked on many projects for Desktop, Web and Mobile platforms.' }
 ];
 
+const skillsList = [
+  { description: 'JavaScript', rating: 4 },
+  { description: 'Angular', rating: 4 },
+  { description: 'HTML5', rating: 4 },
+  { description: 'CSS3', rating: 4 },
+  { description: 'React', rating: 3 },
+  { description: 'Java', rating: 3 },
+  { description: 'NodeJS', rating: 2 },
+  { description: 'MongoDB', rating: 2 },
+  { description: 'PL/SQL', rating: 2 },
+  { description: 'PHP', rating: 1 },
+] 
+
 addExperiences();
+addSkills();
 
 toggleNav.addEventListener('click', (e) => {
   if (ul.classList.contains('open')) {
@@ -30,7 +44,7 @@ toggleNav.addEventListener('click', (e) => {
   }
 });
 
-li.forEach(item => {
+forEach(navItems, (index, item) => {
   item.addEventListener('click', () => {
     ul.classList.remove('open');
     nav.classList.remove('black-background');
@@ -42,7 +56,7 @@ window.addEventListener('scroll', onScroll);
 function onScroll(event) {
   const scrollY = window.scrollY;
 
-  links.forEach(item => {
+  forEach(links, (index, item) => {
     const { offsetTop, offsetHeight } = document.querySelector(item.getAttribute('href'));
     
     if (offsetTop <= scrollY 
@@ -77,3 +91,33 @@ function addExperiences() {
 
   experience.innerHTML += html;
 }
+
+function addSkills() {
+  const html = skillsList.map(skill => {
+    return `
+      <li>
+        <span class="skill-description">${skill.description}</span>
+        <span class="skill-rating">${renderRating(skill.rating)}</span>
+      </li>
+    `;
+  })
+  .join('');
+
+  document.querySelector('.skill-list').innerHTML = html;
+}
+
+function renderRating(rating) {
+  let html = '';
+
+  for (let i = 1; i < 6; i++) {
+    html += i <= rating ? '<span class="fa fa-star"></span>' : '<span class="fa fa-star-o"></span>';;
+  }
+ 
+  return html;
+}
+
+function forEach(array, callback, scope) {
+  for (let i = 0; i < array.length; i++) {
+    callback.call(scope, i, array[i]);
+  }
+};
