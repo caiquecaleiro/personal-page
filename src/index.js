@@ -40,8 +40,9 @@ function onScroll(event) {
   const scrollY = window.scrollY;
 
   forEach(links, (index, item) => {
-    const { offsetTop, offsetHeight } = document.querySelector(item.getAttribute('href'));
-    
+    let { offsetTop, offsetHeight } = document.querySelector(item.getAttribute('href'));   
+    offsetTop -= nav.offsetHeight;
+
     if (offsetTop <= scrollY 
       && offsetTop + offsetHeight > scrollY) {
       item.classList.add('active-section');

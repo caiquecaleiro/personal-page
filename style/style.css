@@ -1,7 +1,8 @@
 body {
-  background-color: #000000;
-  color: #fff;
+  background-color: rgb(228, 225, 213);
+  color: #5b5b5b;
   font-family: 'EB Garamond', serif;
+  font-size: 1.2rem;
 }
 
 header {
@@ -10,7 +11,8 @@ header {
   text-align: center;
   justify-content: center;
   height: 100vh;
-  background: url('../img/cover.jpg') no-repeat center fixed;
+  background: url('../img/coding.jpg') no-repeat center fixed;
+  color: #fff;
 }
 
 header h1 {
@@ -33,17 +35,29 @@ hr {
   border-color: #fff;
 }
 
+h3 {
+  font-size: 2.75rem;
+  text-align: center;
+}
+
 section {
-  padding: 5vh 8vw 5vh 8vw;
+  padding: 10vh 20vw;
 }
 
 .experience {
   text-align: left;
-  padding: 20px 0 20px 0;
+}
+
+.experience:not(:last-of-type) {
+  padding-bottom: 20px;
 }
 
 .location, .additional-info > strong {
   display: block;
+}
+
+.location {
+  margin-top: 5px;
 }
 
 .experience h5 {
@@ -54,6 +68,7 @@ section {
   position: fixed;
   top: 0;
   width: 100%;
+  box-shadow: 0px 2px 8px #000000;
 }
 
 .flex-nav ul {
@@ -75,13 +90,17 @@ section {
   display: none;
 }
 
+.toggleNav:hover {
+  cursor: pointer;
+}
+
 nav a {
   color: #fff !important;
   font-weight: 400;
   letter-spacing: 2px;
   text-decoration: none !important;
   background: rgba(0,0,0,0.2);
-  padding: 20px 5px;
+  padding: 10px 5px;
   display: inline-block;
   width: 100%;
   text-align: center;
@@ -114,6 +133,18 @@ nav a {
   max-width: 50%;
 }
 
+.skill-item:nth-child(2n) {
+  padding: 0 0 0 20px;
+}
+
+.custom-hr {
+  margin: 0 auto 50px auto;
+}
+
+hr {
+  border-top: 1px solid #8b8b8b;
+}
+
 @media all and (max-width: 880px) {
   .flex-nav ul {
     flex-wrap: wrap;
@@ -124,7 +155,8 @@ nav a {
   }
 
   .toggleNav {
-    display: block
+    display: block;
+    padding: 10px 5px;
   }
   
   .flex-nav ul {
@@ -134,9 +166,31 @@ nav a {
   .flex-nav ul.open {
     display: flex;
   }
+
+  nav a {
+    padding: 20px 5px;
+  }
 }
 
-@media all and (min-width: 701px) {
+@media all and (max-width: 400px) {
+  body {
+    font-size: 1rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  .custom-hr {
+    margin-bottom: 25px;
+  }
+
+  .experience:not(:last-of-type) {
+    padding-bottom: 40px;
+  }
+}
+
+@media all and (min-width: 1200px) {
   .experience {
     display: flex;
     flex-wrap: wrap
@@ -154,14 +208,12 @@ nav a {
 @media all and (max-width: 700px) {
   section {
     text-align: center;
-  }
-
-  .role-detail {
-    display: none;
+    padding: 10vh 10vw;
   }
 
   .skill-item {
     flex: 1 100%;
     max-width: 100%;
+    padding: 0 !important;
   }
 }
