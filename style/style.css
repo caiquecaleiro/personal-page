@@ -98,7 +98,7 @@ nav a {
   font-style: italic;
 }
 
-.skill-list {
+#skills ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -106,11 +106,12 @@ nav a {
   flex-wrap: wrap;
 }
 
-.skill-list li {
+.skill-item {
   flex: 1 50%;
   display: flex;
   justify-content: space-between;
   padding-right: 20px;
+  max-width: 50%;
 }
 
 @media all and (max-width: 880px) {
@@ -159,7 +160,8 @@ nav a {
     display: none;
   }
 
-  .skill-list li {
+  .skill-item {
     flex: 1 100%;
+    max-width: 100%;
   }
 }
