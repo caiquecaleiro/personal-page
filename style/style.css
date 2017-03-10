@@ -29,6 +29,12 @@ header p {
 
 footer {
   text-align: center;
+  height: 50px;
+}
+
+footer span {
+  position: relative;
+  top: 10px;
 }
 
 hr {
@@ -107,9 +113,10 @@ nav a {
   transition: 0.5s;
 }
 
-.black-background {
+.nav-full-size {
   height: 100vh;
   background: #000000;
+  z-index: 1;
 }
 
 .active-section {
@@ -137,12 +144,57 @@ nav a {
   padding: 0 0 0 20px;
 }
 
-.custom-hr {
+h3 + hr {
   margin: 0 auto 50px auto;
 }
 
 hr {
   border-top: 1px solid #8b8b8b;
+}
+
+.grey-background {
+  background: #333333;
+}
+
+.white-text {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+#contact {
+  height: 600px;
+}
+
+#contact .location {
+  margin: 0 0 10px 0;
+}
+
+.contact-list a {
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.5;
+}
+
+.contact-list a:hover {
+  opacity: 1;
+}
+
+.contact-list span {
+  font-size: 1.1rem;
+  position: relative;
+  top: -7px;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 35px 0 0 0;
+  text-align: left;
+}
+
+.contact-list span {
+  margin-right: 5px;
 }
 
 @media all and (max-width: 880px) {
@@ -181,7 +233,7 @@ hr {
     font-size: 2rem;
   }
 
-  .custom-hr {
+  h3 + hr {
     margin-bottom: 25px;
   }
 

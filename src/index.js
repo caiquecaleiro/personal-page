@@ -6,12 +6,8 @@ const ul = document.querySelector('.flex-nav ul');
 const navItems = ul.querySelectorAll('li');
 const nav = document.querySelector('nav');
 const links = document.querySelectorAll('a[href^="#"]');
-
-const about = document.querySelector('#about');
-const skills = document.querySelector('#skills');
 const experience = document.querySelector('#experience');
-const volunteer = document.querySelector('#volunteer');
-const contact = document.querySelector('#contact');
+
 
 addExperiences();
 addDevelopmentSkills();
@@ -20,17 +16,17 @@ addLanguageSkills();
 toggleNav.addEventListener('click', (e) => {
   if (ul.classList.contains('open')) {
     ul.classList.remove('open');
-    nav.classList.remove('black-background');
+    nav.classList.remove('nav-full-size');
   } else {
     ul.classList.add('open');
-    nav.classList.add('black-background');
+    nav.classList.add('nav-full-size');
   }
 });
 
 forEach(navItems, (index, item) => {
   item.addEventListener('click', () => {
     ul.classList.remove('open');
-    nav.classList.remove('black-background');
+    nav.classList.remove('nav-full-size');
   });
 });
 
