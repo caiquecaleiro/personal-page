@@ -8,7 +8,6 @@ const nav = document.querySelector('nav');
 const links = document.querySelectorAll('a[href^="#"]');
 const experience = document.querySelector('#experience');
 
-
 addExperiences();
 addDevelopmentSkills();
 addLanguageSkills();
@@ -22,6 +21,11 @@ toggleNav.addEventListener('click', (e) => {
     nav.classList.add('nav-full-size');
   }
 });
+
+window.addEventListener('resize', () => {
+	ul.classList.remove('open');
+  nav.classList.remove('nav-full-size');
+}, false);
 
 forEach(navItems, (index, item) => {
   item.addEventListener('click', () => {

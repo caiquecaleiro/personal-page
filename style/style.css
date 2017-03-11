@@ -224,6 +224,16 @@ hr {
   }
 }
 
+@media all and (max-width: 880px) and (orientation: landscape) {
+  .flex-nav li {
+    flex: 1 50%;
+  }
+
+  .flex-nav .social {
+    flex: 1 25%;
+  }
+}
+
 @media all and (max-width: 400px) {
   body {
     font-size: 1rem;
@@ -239,6 +249,10 @@ hr {
 
   .experience:not(:last-of-type) {
     padding-bottom: 40px;
+  }
+  
+  .contact-list span {
+    font-size: 1rem;
   }
 }
 
