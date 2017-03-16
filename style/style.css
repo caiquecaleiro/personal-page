@@ -3,6 +3,7 @@ body {
   color: #5b5b5b;
   font-family: 'EB Garamond', serif;
   font-size: 1.2rem;
+  position: relative;
 }
 
 header {
@@ -47,7 +48,7 @@ h3 {
 }
 
 section {
-  padding: 10vh 20vw;
+  padding: 60px 20vw;
 }
 
 .experience {
@@ -119,7 +120,7 @@ nav a {
   z-index: 1;
 }
 
-.active-section {
+.active {
   background: rgba(37, 37, 37, 0.5);
   font-style: italic;
 }
@@ -274,7 +275,7 @@ hr {
 @media all and (max-width: 700px) {
   section {
     text-align: center;
-    padding: 10vh 10vw;
+    padding: 60px 10vw;
   }
 
   .skill-item {

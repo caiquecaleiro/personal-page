@@ -1,4 +1,7 @@
 import '../style/style.css';
+import smoothScroll from 'smooth-scroll';
+import gumshoe from 'gumshoe';
+
 import { DEV_SKILLS, LANGUAGES, EXPERIENCES } from './data';
 
 const toggleNav = document.querySelector('.toggleNav');
@@ -11,6 +14,11 @@ const experience = document.querySelector('#experience');
 addExperiences();
 addDevelopmentSkills();
 addLanguageSkills();
+gumshoe.init({
+  offset: 50
+});
+smoothScroll.init();
+
 
 toggleNav.addEventListener('click', (e) => {
   if (ul.classList.contains('open')) {
@@ -33,24 +41,6 @@ forEach(navItems, (index, item) => {
     nav.classList.remove('nav-full-size');
   });
 });
-
-window.addEventListener('scroll', onScroll);
-
-function onScroll(event) {
-  const scrollY = window.scrollY;
-
-  forEach(links, (index, item) => {
-    let { offsetTop, offsetHeight } = document.querySelector(item.getAttribute('href'));   
-    offsetTop -= nav.offsetHeight;
-
-    if (offsetTop <= scrollY 
-      && offsetTop + offsetHeight > scrollY) {
-      item.classList.add('active-section');
-    } else {
-      item.classList.remove('active-section');
-    }
-  });
-}
 
 function addExperiences() {
   const html = EXPERIENCES.map(exp => {
