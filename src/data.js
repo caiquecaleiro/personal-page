@@ -3,10 +3,12 @@ export const DEV_SKILLS = [
   { description: 'Angular', rating: 4 },
   { description: 'HTML5', rating: 4 },
   { description: 'CSS3', rating: 4 },
+  { description: 'SQL', rating: 4 },
   { description: 'React', rating: 3 },
   { description: 'Java', rating: 3 },
   { description: 'NodeJS', rating: 2 },
   { description: 'MongoDB', rating: 2 },
+  { description: 'GraphQL', rating: 2 },
   { description: 'PL/SQL', rating: 2 },
   { description: 'PHP', rating: 1 }
 ];
