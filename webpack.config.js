@@ -9,6 +9,9 @@ const config = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.[chunkhash].js'
   },
+  devServer: {
+    port: 4000
+  },
   module: {
     rules: [
       {
@@ -24,12 +27,10 @@ const config = {
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/,
-        use: [
-          {
-            loader: 'url-loader'
-          },
-          'image-webpack-loader'
-        ]
+        use: ['url-loader', {
+          loader: 'image-webpack-loader',
+          options: {}
+        }]
       }
     ]
   },
