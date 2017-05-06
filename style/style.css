@@ -1,7 +1,7 @@
 body {
   background-color: rgb(228, 225, 213);
   color: #5b5b5b;
-  font-family: 'EB Garamond', serif;
+  font-family: serif;
   font-size: 1.2rem;
   position: relative;
 }
@@ -274,7 +274,6 @@ hr {
 
 @media all and (max-width: 700px) {
   section {
-    text-align: center;
     padding: 60px 10vw;
   }
 
