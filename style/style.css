@@ -12,7 +12,11 @@ header {
   text-align: center;
   justify-content: center;
   height: 100vh;
-  background: url('../img/coding.jpg') no-repeat center fixed;
+  background: url('../img/coding.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   color: #fff;
 }
 
