@@ -41,6 +41,7 @@ const config = {
     }),
     new CopyWebpackPlugin([
       { from: 'CNAME' },
+      { from: 'img/favicon.ico' }
     ])
   ]
 };
