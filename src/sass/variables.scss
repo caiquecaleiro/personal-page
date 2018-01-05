@@ -1,0 +1,86 @@
+/*
+  Variables
+  - Breakpoints (Horizontal)
+  - Asset Locations
+  - Colors
+  - Typography
+  - Widths
+  - Heights
+*/
+
+
+/*
+  Breakpoints
+*/
+@custom-media --to-tiny-screen-w (max-width: 400px);
+@custom-media --to-small-screen-w (max-width: 600px);
+@custom-media --to-medium-screen-w (max-width: 800px);
+@custom-media --to-normal-screen-w (max-width: 1000px);
+@custom-media --to-large-screen-w (max-width: 1200px);
+
+@custom-media --from-tiny-screen-w (min-width: 401px);
+@custom-media --from-small-screen-w (min-width: 601px);
+@custom-media --from-medium-screen-w (min-width: 801px);
+@custom-media --from-normal-screen-w (min-width: 1001px);
+@custom-media --from-large-screen-w (min-width: 1201px);
+
+
+/*
+    Color Naming Conventions:
+    - primary, secondary, tertiary
+    - dark, light
+    - success, warning, error
+
+    // Lighter
+    - tint-1
+    - tint-2
+
+    // Darker
+    - shade-1
+    - shade-2
+
+    // Opaque
+    - opac-1
+    - opac-2
+
+    Color names generated at http://chir.ag/projects/name-that-color/
+*/
+
+$color-black:               rgb(0, 0, 0);
+$color-white:               rgb(255, 255, 255);
+$color-astral:              rgb(53, 112, 181);
+$color-don-juan:            rgb(90, 82, 82);
+
+$color-primary:             $color-astral;
+$color-secondary:           $color-don-juan;
+
+$color-light:               $color-white;
+$color-light-opac-1:        color($color-light alpha(90%));
+
+$color-dark:                $color-black;
+
+
+/*
+    Typography
+    - Typefaces
+    - Weights
+*/
+$font-open-sans: 'Open Sans', sans-serif;
+
+$font-primary: $font-open-sans;
+
+$weight-light:        300;
+$weight-normal:       400;
+$weight-bold:         700;
+
+
+/*
+    Widths
+*/
+$constrain-width-x-large:     1800;
+$constrain-width-large:       1400;
+$constrain-width:             1140;
+$constrain-width-medium:      740;
+$constrain-width-small:       600;
+
+$constrain-width-content:     700;

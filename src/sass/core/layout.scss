@@ -1,0 +1,40 @@
+/*
+    Layout
+    - Constraint
+ */
+
+// Constraint
+.constrain-width {
+    max-width: rem($constrain-width);
+    padding-right: rem(20);
+    padding-left: rem(20);
+    margin-right: auto;
+    margin-left: auto;
+
+    @media (--from-medium-screen-w) {
+        padding-right: rem(30);
+        padding-left: rem(30);
+    }
+
+
+    // Types
+    &.small {
+        max-width: rem($constrain-width-small);
+    }
+
+    &.medium {
+        max-width: rem($constrain-width-medium);
+    }
+
+    &.large {
+        max-width: rem($constrain-width-large);
+    }
+
+    &.x-large {
+        max-width: rem($constrain-width-x-large);
+    }
+}
+
+.constrain-content {
+    max-width: rem($constrain-width-content);
+}

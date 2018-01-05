@@ -1,0 +1,39 @@
+/*
+    Type
+ */
+ html {
+    color: $color-dark;
+    font-family: $font-primary;
+    font-size: 16px;
+    line-height: 1.6;
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); // Reset
+}
+
+
+// Normal text
+p {
+    margin-top: 0;
+    margin-bottom: rem(30);
+
+    font-size: rem(18);
+}
+
+strong {
+    font-weight: $weight-bold;
+}
+
+
+// Link
+a {
+    color: $color-primary;
+    text-decoration: underline;
+
+    transition: color 0.2s ease-in-out;
+
+
+    // States
+    &:hover {
+        color: $color-primary;
+    }
+}
